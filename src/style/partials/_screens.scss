@@ -1,0 +1,11 @@
+@mixin tabs {
+   @media (min-width: 768px) {
+      @content;
+   }
+}
+
+@mixin laps-mini {
+   @media (min-width: 1024px) {
+      @content;
+   }
+}

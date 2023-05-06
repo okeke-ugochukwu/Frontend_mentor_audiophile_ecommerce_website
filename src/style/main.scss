@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import './partials/base';
+
+* {
+   font-family: 'Manrope', sans-serif;
+   transition: .3s;
+//    outline: 1px solid rgb(194, 192, 192); 
+}
+.margin {
+   width: 82.7%;
+   margin: 0 auto;
+   max-width: 1109.83px;
+
+   @include tabs {
+      width: 89.71%;
+   }
+
+}

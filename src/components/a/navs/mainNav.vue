@@ -1,0 +1,33 @@
+<template>
+   <nav>
+      <ul class="flex gap-[34px]">
+         <li 
+            class="inline text-[13px]"
+            v-for="item in navLinks" :key="item"
+         >
+            <router-link 
+               :to="item.toLowerCase()" 
+               class="text-white font-bold leading-[25px] tracking-[2px] hover:text-ad-brown"
+            >
+               {{ item }}
+            </router-link>
+         </li>
+      </ul>
+   </nav>
+</template>
+
+<script>
+   export default {
+      name: 'MainNav',
+
+      setup () {
+         const navLinks = ['HOME', 'HEADPHONES', 'SPEAKERS', 'EARPHONES']
+
+         return { navLinks }
+      }
+   }
+</script>
+
+<style lang="scss" scoped>
+
+</style>

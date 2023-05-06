@@ -1,0 +1,118 @@
+@import './screens';
+@import './colors';
+
+//HEADINGS
+.heading-1 {
+   font-size: 2.25rem; //36px
+   line-height: 2.5rem; //40px  
+   font-weight: 700;
+   letter-spacing: 0.0804rem; //1.28571px 
+   
+   @include tabs {
+      font-size: 3.5rem; //56px
+      line-height: 3.625rem; //58px
+      letter-spacing: 0.125rem; //2px
+   }
+}
+.heading-2 {
+   font-size: 1.75rem; //28px
+   line-height: 2.375rem; //38px
+   font-weight: 700;
+   letter-spacing: 1px; //1px
+   
+   @include tabs {
+      font-size: 2.5rem; //40px
+      line-height: 2.75rem; //44px
+      letter-spacing: 0.0893rem; //1.42857px
+   }
+}
+.heading-3 {
+   font-size: 1.5rem; //24px
+   line-height: 2.25rem; //24px
+   font-weight: 700;
+   letter-spacing: 0.0536rem; //0.857143px
+   
+   @include tabs {
+      font-size: 32px; //32px
+      line-height: 36px; //36px
+      letter-spacing: 1.14286px; //1.14286px
+   } 
+}
+.heading-4 {
+   
+}
+.heading-5 {
+   font-size: 24px; //24px
+   line-height: 33px; //33px
+   font-weight: 700;
+   letter-spacing: 1.71429px; //1.71429px
+   
+   @include tabs {
+
+   }
+}
+.heading-6 {
+   font-size: 0.9375rem; //15px
+   line-height: 1.25rem; //20px
+   font-weight: 700;
+   letter-spacing: 0.067rem; //1.07143px
+
+   
+   @include laps-mini {
+      font-size: 1.125rem; //18px
+      line-height: 1.5625rem; //25px
+      letter-spacing: 0.0804rem; //1.28571px
+   }
+}
+.overline-heading {
+   font-size: 0.875rem; //14px
+   line-height: 1.1875rem; //19px 
+   letter-spacing: 0.625rem; //10px
+}
+
+//BODY TEXT
+.body-text {
+   font-size: 0.9375rem; //15px
+   line-height: 1.5625rem; //25px
+   font-weight: 500;
+}
+
+//BUTTONS
+.primary_btn {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 160px;
+   color: #ffffffc2;
+   height: 48px;
+   font-weight: 700;
+   font-size: 0.8125rem; //13px
+   line-height: 1.125rem; //18px
+   letter-spacing: 0.0625rem; ///1px
+   background: $adBrown;
+   color:  white;
+}
+.secondary_btn {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 160px;
+   height: 48px;
+   font-weight: 700;
+   font-size: 0.8125rem; //13px
+   line-height: 1.125rem; //18px
+   letter-spacing: 0.0625rem; ///1px
+   background: $adBrown;
+   color:  white;
+}
+.aux_btn {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 13.32px;
+   font-size: 0.8125rem; //13px
+   font-weight: 700;
+   line-height: 1.125rem; //18px
+   letter-spacing: 0.0625rem; //1px
+   color: rgba(0, 0, 0, 0.5);
+}
