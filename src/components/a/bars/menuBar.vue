@@ -7,7 +7,7 @@
        <!-- MAIN MARGIN -->
        <div class="margin  md:flex md:gap-[10px]">
          <floatingProductCard 
-            v-for="item in cardItems" :key="item" :cardItem="item"
+            v-for="category in productCategories"  :key="category" :category="category"
             class="mt-[68px] w-full md:mt-0"
          />
       </div>
@@ -15,7 +15,7 @@
      </div>
 
       <!-- MENUBAR OVERLAY -->
-      <div class="overlay absolute top-0 z-1 w-full h-screen bg-black opacity-40">
+      <div class="overlay fixed top-[90px] z-9 w-full h-screen bg-black opacity-40">
 
       </div>
 
@@ -24,7 +24,6 @@
 
 <script>
    import floatingProductCard from '@/components/product/floatingProductCard.vue'
-   import cardItems from '@/data/menuItems';
    import { computed } from 'vue'
    import { useStore } from 'vuex';
 
@@ -37,8 +36,9 @@
          const store = useStore()
 
          const menuBar = computed(() => { return store.state.menuBar })
+         const productCategories = computed(() => { return store.state.productCategories})
 
-         return { cardItems, menuBar }
+         return { menuBar, productCategories }
       }
    }
 </script>

@@ -46,22 +46,38 @@
 
    </section>
 
+   <!-- PRODUCT CATEGORIES -->
+   <section class="product-categories pt-5 pb-[30px] md:pt-[148px] md:pb-[43px]">
+
+      <!-- MARGIN -->
+      <div class="margin md:flex md:gap-[10px] lg:gap-[30px]">
+         <floatingProductCard 
+            v-for="category in productCategories" :key="category" :category="category"
+            class="mt-[68px] w-full md:mt-0"
+         />
+      </div>
+
+   </section>
+
 </template>
 
 <script>
    import headerBar from '@/components/a/bars/headerBar.vue'
    import menuBar from '@/components/a/bars/menuBar.vue'
-
+   import floatingProductCard from '@/components/product/floatingProductCard.vue'
+   import { computed } from 'vue'
+   import { useStore } from 'vuex'
 //    import { ref } from 'vue'
 
    export default {
       name: 'HomePage',
-      components: { headerBar, menuBar },
+      components: { headerBar, menuBar, floatingProductCard },
 
       setup () {
-         
+         const store = useStore();
+         const productCategories = computed(() => { return store.state.productCategories })
 
-         return { }
+         return { productCategories }
       }
    }
 </script>

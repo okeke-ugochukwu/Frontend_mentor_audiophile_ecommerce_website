@@ -1,13 +1,17 @@
 <template>
-   <div class="floating-product-card relative bg-ad-light-grey flex flex-col items-center justify-center rounded-lg">
+   <div class="
+      floating-product-card relative bg-ad-light-grey flex flex-col items-center justify-center rounded-lg h-[165px]
+      lg:h-[204px] 
+      "
+   >
       <img 
-         :src="require(`@/assets/imgs/shared/desktop/image-category-thumbnail-${cardItem}.png`)" 
-         :alt="cardItem.toLowerCase()"
-         class="w-[128px] mt-[-40px]"
+         :src="require(`@/assets/imgs/shared/desktop/image-category-thumbnail-${category}.png`)" 
+         :alt="category.toLowerCase()"
+         class="w-[128px] mt-[-40px] lg:w-[200px] lg:mt-[-83px]"
       > 
 
       <h6 class="heading-6 text-black mb-[17px]">
-         {{ cardItem.toUpperCase() }}
+         {{ category.toUpperCase() }}
       </h6>
 
       <button class="aux_btn mb-[22px]">
@@ -21,16 +25,16 @@
 </template>
 
 <script>
-export default {
-   name: 'FloatingProductCard',
-   props: ['cardItem'],
-   
-   setup () {
+   export default {
+      name: 'FloatingProductCard',
+      props: ['category'],
       
+      setup () {
+         
 
-      return {}
+         return {}
+      }
    }
-}
 </script>
 
 <style lang="scss" scoped>

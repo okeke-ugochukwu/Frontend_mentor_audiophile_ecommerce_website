@@ -4,7 +4,8 @@ const store = createStore({
   state: {
    menuBar: {
       isActive: false
-   }
+   },
+   productCategories: ['headphones', 'speakers', 'earphones']
   },
   getters: {
   },
