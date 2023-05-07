@@ -23,6 +23,7 @@ module.exports = {
          'ad-black': 'hsl(0, 0%, 6%)',
          'ad-light-grey': 'hsl(0, 0%, 95%)',
          'ad-off-white' : '0, 0%, 98%',
+         'ad-off-white-text': '#ffffff80',
          'ad-peach-brown': 'hsl(21, 94%, 75%)'
       },
 

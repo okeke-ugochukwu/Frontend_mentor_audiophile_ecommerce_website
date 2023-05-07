@@ -83,7 +83,6 @@
    align-items: center;
    justify-content: center;
    width: 160px;
-   color: #ffffffc2;
    height: 48px;
    font-weight: 700;
    font-size: 0.8125rem; //13px
@@ -102,8 +101,21 @@
    font-size: 0.8125rem; //13px
    line-height: 1.125rem; //18px
    letter-spacing: 0.0625rem; ///1px
-   background: $adBrown;
+   background: black;
    color:  white;
+}
+.outline_btn {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 160px;
+   height: 48px;
+   font-weight: 700;
+   font-size: 0.8125rem; //13px
+   line-height: 1.125rem; //18px
+   letter-spacing: 0.0625rem; ///1px
+   color: black;
+   border: 1px solid black;
 }
 .aux_btn {
    display: flex;
