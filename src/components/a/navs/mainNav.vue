@@ -1,8 +1,8 @@
 <template>
    <nav>
-      <ul class="flex gap-[34px]">
+      <ul class="flex flex-col gap-4 md:flex-row lg:gap-[34px]">
          <li 
-            class="inline text-[13px]"
+            class="text-center lg:text-left lg:inline text-[13px]"
             v-for="item in navLinks" :key="item"
          >
             <router-link 

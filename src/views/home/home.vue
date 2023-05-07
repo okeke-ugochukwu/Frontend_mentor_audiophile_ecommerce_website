@@ -1,6 +1,6 @@
 <template>
 
-   <!-- HERO SECTION -->
+   <!-- HEADER + HERO SECTION -->
    <section
       class="hero relative p-[0.01px]
          bg-[url('/src/assets/imgs/home/mobile/image-header.jpg')] bg-cover bg-center
@@ -96,7 +96,7 @@
                   ZX9 SPEAKER
                </h2>
 
-               <p class="body-text text-ad-off-white-text mb-6 max-w-[280px] md:mb-10 lg:max-w-[340px]">
+               <p class="body-text text-ad-off-white-text mb-6 max-w-[280px] md:mb-10 lg:max-w-[300px]">
                   Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.
                </p>
 
@@ -185,11 +185,14 @@
 
    </section>
 
+   <!-- FOOTER -->
+   <footerBar />
 </template>
 
 <script>
    import headerBar from '@/components/a/bars/headerBar.vue'
    import menuBar from '@/components/a/bars/menuBar.vue'
+   import footerBar from '@/components/a/bars/footerBar.vue'
    import floatingProductCard from '@/components/product/floatingProductCard.vue'
    import { computed } from 'vue'
    import { useStore } from 'vuex'
@@ -197,7 +200,7 @@
 
    export default {
       name: 'HomePage',
-      components: { headerBar, menuBar, floatingProductCard },
+      components: { headerBar, menuBar, floatingProductCard, footerBar },
 
       setup () {
          const store = useStore();
