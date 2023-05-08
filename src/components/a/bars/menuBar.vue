@@ -1,21 +1,21 @@
 <template>
-   <div class="menu-bar" v-show="menuBar.isActive">
+   <div class="menu-bar z-[21]" v-show="menuBar.isActive" :class="{'fixed top-[90px]': $store.state.menuBar.isActive}">
 
       <!-- MENU BAR CONTENT -->
-     <div class="relative z-10  bg-white pt-[20px] pb-[35px] md:pt-[108px] md:pb-[67px]">
+      <div class="w-full relative z-[21]  bg-white pt-[20px] pb-[35px] md:pt-[108px] md:pb-[67px]">
 
-       <!-- MAIN MARGIN -->
-       <div class="margin  md:flex md:gap-[10px]">
-         <floatingProductCard 
-            v-for="category in productCategories"  :key="category" :category="category"
-            class="mt-[68px] w-full md:mt-0"
-         />
+         <!-- MAIN MARGIN -->
+         <div class="margin  md:flex md:gap-[10px]">
+            <floatingProductCard 
+               v-for="category in productCategories"  :key="category" :category="category"
+               class="mt-[68px] w-full md:mt-0"
+            />
+         </div>
+
       </div>
 
-     </div>
-
       <!-- MENUBAR OVERLAY -->
-      <div class="overlay fixed top-[90px] z-9 w-full h-screen bg-black opacity-40">
+      <div class="overlay fixed top-[90px] z-20 w-full h-screen bg-black opacity-40" v-show="$store.state.menuBar.isActive">
 
       </div>
 

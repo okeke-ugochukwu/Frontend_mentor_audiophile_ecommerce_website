@@ -1,7 +1,7 @@
 <template>
    <header
-      class="w-full h-[90px] border-solid border-b-2 border-b-[#ffffff1a] md:h-[90px] md:border-none"
-      :class="{'bg-black': store.state.menuBar.isActive}"
+      class="w-full h-[90px] border-solid border-b-2 border-b-[#ffffff1a] z-[21] md:h-[90px] md:border-none"
+      :class="{'bg-black fixed    border-none': store.state.menuBar.isActive}" 
    >
 
       <!-- MAIN MARGIN -->
@@ -37,7 +37,7 @@
          <mainNav class="hidden lg:block"/>
 
          <!-- CART -->
-         <button class="w-[26px]"  :class="{'opacity-50': store.state.menuBar.isActive}">
+         <button class="w-[26px]"  :class="{'opacity-50': $store.state.menuBar.isActive}">
             <img 
                class="w-full"
                src="@/assets/imgs/shared/cart.svg" alt="cart"

@@ -1,6 +1,6 @@
 <template>
 
-   <!-- HEADER + HERO SECTION -->
+   <!-- >>>>>> HEADER + HERO SECTION -->
    <section
       class="hero relative p-[0.01px]
          bg-[url('/src/assets/imgs/home/mobile/image-header.jpg')] bg-cover bg-center
@@ -11,7 +11,7 @@
    >
       <headerBar />
 
-      <menuBar  class="absolute w-full"/>
+      <menuBar  class="w-full"/>
 
       <!-- MAIN MARGIN -->
       <div
@@ -46,26 +46,26 @@
 
    </section>
 
-   <!-- PRODUCT CATEGORIES -->
+   <!-- >>>>>> PRODUCT CATEGORIES -->
    <section
       class="product-categories pt-5 pb-[30px] md:pt-[148px] md:pb-[43px] lg:pt-[200px] lg:pb-[84px]"
    >
 
-      <!-- MARGIN -->
+      <!-- MAIN MARGIN -->
       <div class="margin md:flex md:gap-[10px] lg:gap-[30px]">
          <floatingProductCard
             v-for="category in productCategories" :key="category" :category="category"
-            class="mt-[68px] w-full md:mt-0"
+            class="mt-[68px] w-full md:mt-0 relative z-1"
          />
       </div>
 
    </section>
 
-   <!-- FEATURED PRODUCTS -->
+   <!-- >>>>>> FEATURED PRODUCTS -->
    <section
       class="featured-products py-[60px] md:py-[48px] lg:pt-[84px] lg:pb-[100px]"
    >
-      <!-- MARGIN -->
+      <!-- MAIN MARGIN -->
       <div class="margin flex flex-col items-center gap-6 md:gap-8 lg:gap-12">
 
          <!-- ZX9 SPEAKER -->
@@ -81,7 +81,7 @@
             <div class="relative bottom-0 overflow-visible flex items-center justify-center lg:w-full lg:justify-end lg:mt-[100px] pxl:mt-[128px]">
                <img 
                   src="@/assets/imgs/home/desktop/pattern-circles.svg" alt="patter_circles" 
-                  class="reset-img absolute z-1 w-[580px] max-w-unset md:w-[930px] lg:right-[-300px] lg:top-[-130px]"
+                  class="reset-img absolute z-1 w-[580px] max-w-unset md:w-[930px] lg:w-[850px] lg:right-[-240px] lg:top-[-130px] xl:w-[950px] xl:right-[-285px]"
                >
 
                <picture class="relative z-2">
@@ -154,10 +154,10 @@
       </div>
    </section>
 
-   <!-- ABOUT SECTION -->
+   <!-- >>>>>> ABOUT SECTION -->
    <section class="about py-[60px] md:py-[48px] lg:py-[100px]">
 
-      <!-- MARGIN -->
+      <!-- MAIN MARGIN -->
       <div class="margin flex flex-col items-center gap-10 md:gap-[63px] lg:flex-row-reverse">
          <!-- IMAGE -->
          <div class="overflow-hidden rounded-lg w-full lg:w-[50%]">
@@ -185,7 +185,7 @@
 
    </section>
 
-   <!-- FOOTER -->
+   <!-- >>>>>> FOOTER -->
    <footerBar />
 </template>
 
