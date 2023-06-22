@@ -22,14 +22,14 @@
 
          <!-- ABOUT + (COPYRIGHT & SOCIALS) -->
          <div class="text-center text-white flex flex-col items-center gap-12 md:items-start md:gap-[80px] md:text-left">
-            <p class="body-text max-w-[400px] md:max-w-[689px] pxl:max-w-[540px]">
+            <p class="body-text text-ad-off-white-text max-w-[400px] md:max-w-[689px] pxl:max-w-[540px]">
                Audiophile is an all in one stop to fulfill your audio needs. 
                We're a small team of music lovers and sound specialists who are devoted to helping you 
                get the most out of personal audio. Come and visit our demo facility - we’re open 7 days a week.
             </p>
 
             <div class="w-full flex flex-col gap-12 md:flex-row md:justify-between">
-               <div class="body-text">Copyright 2021. All Rights Reserved</div>
+               <div class="body-text text-ad-off-white-text">Copyright {{ new Date().getFullYear() }}. All Rights Reserved</div>
 
                <div>
                   <ul class="flex items-center justify-center gap-4">

@@ -14,13 +14,13 @@
          {{ category.toUpperCase() }}
       </h6>
 
-      <button class="aux_btn mb-[22px]">
+      <router-link :to="`/${category}`" class="aux_btn mb-[22px]">
          <span>
             SHOP
          </span>  
 
          <img src="@/assets/imgs/shared/desktop/icon-arrow-right.svg" alt="now">
-      </button>
+      </router-link>
    </div>
 </template>
 

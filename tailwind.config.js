@@ -21,9 +21,11 @@ module.exports = {
       colors: {
          'ad-brown': 'hsl(22, 65%, 57%)',
          'ad-black': 'hsl(0, 0%, 6%)',
+         'ad-off-black': 'rgba(0, 0, 0, 0.5)',
          'ad-light-grey': 'hsl(0, 0%, 95%)',
-         'ad-off-white' : '0, 0%, 98%',
+         'ad-off-white' : 'hsl(0, 0%, 98%)',
          'ad-off-white-text': '#ffffff80',
+         'ad-off-black-text': '#00000080',
          'ad-peach-brown': 'hsl(21, 94%, 75%)'
       },
 
@@ -46,7 +48,7 @@ module.exports = {
          'xl': '1280px',
          // => @media (min-width: 1280px) { ... }
 
-         'p2xl': '1500px',
+         'p2xl': '1440px',
          // => @media (min-width: 1500px) { ... }
 
          '2xl': '1536px',

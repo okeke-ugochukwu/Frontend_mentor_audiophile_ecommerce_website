@@ -14,8 +14,8 @@ module.exports = defineConfig({
       },
 
       
-      product: {
-         entry: './src/views/product/main.js',
+      productCategory: {
+         entry: './src/views/productCategory/main.js',
          template: 'public/index.html',
          filename: 'product.html',
          chunks: ['chunk-vendors', 'chunk-common', 'product'],
