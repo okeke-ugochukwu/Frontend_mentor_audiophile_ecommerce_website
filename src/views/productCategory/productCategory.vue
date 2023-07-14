@@ -6,7 +6,7 @@
 
    <main>
       <!-- VIEW FOR CATEGORY PRODUCTS & CATEGORY PRODUCTS DETAIL -->
-      <router-view :productCategory="productCategory"/>
+      <router-view></router-view>
 
       <!-- >>>>>> PRODUCT CATEGORIES SECION-->
       <section
@@ -38,8 +38,6 @@
    import aboutSection from '@/components/a/sections/aboutSection'
    import GET_PRODUCTS from '@/composables/getProducts'
    import { computed, onMounted } from 'vue'; import { useStore } from 'vuex'
-   import { useRoute } from 'vue-router'
-//    import { ref } from 'vue'
 
    export default {
       name: 'HomePage',
@@ -47,19 +45,15 @@
 
       setup () {
          const store = useStore();
-         const route = useRoute()
          const productCategories = computed(() => { return store.state.productCategories })
 
          onMounted(() => {
             //CHECK IF THERE'S DATA IN STORE, THEN ACT ACCORDINGLY
             store.state.products.length === 0 ?
                GET_PRODUCTS(store) : console.log('Data in store')
-         })
+         }) 
 
-         //GET PRODUCTS FROM STATE
-         const productCategory = route.params.id
-
-         return { productCategories, productCategory }
+         return { productCategories }
       }
    }
 </script>

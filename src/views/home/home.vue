@@ -1,52 +1,51 @@
 <template>
-
-   <!-- >>>>>> HEADER + HERO SECTION -->
-   <section
-      class="hero relative p-[0.01px]
-         bg-[url('/src/assets/imgs/home/mobile/image-header.jpg')] bg-cover bg-center
-         sml:bg-[url('/src/assets/imgs/home/tablet/image-header.jpg')]
-         lg:bg-[url('/src/assets/imgs/home/desktop/image-hero.jpg')] lg:bg-[55%]
-         pxl:bg-center
-      "
-   >
-      <headerBar />
-
-      <menuBar  class="w-full"/>
-
-      <!-- MAIN MARGIN -->
-      <div
-         class="
-            margin pt-[108px] pb-[112px] text-center flex flex-col justify-center items-center
-            md:pt-[126px] md:pb-[167px]
-            lg:justify-start lg:items-start lg:text-left
-            xl:pt-[128px] xl:pbt-[158px]
-            p2xl:pt-[140px] p2xl:pb-[200px]
-            p4xl:pb-[250px]
-         "
-         >
-
-         <span class="overline-heading text-ad-off-white-text mb-4 md:mb-6">
-            NEW PRODUCT
-         </span>
-
-         <!-- HEADING -->
-         <h1 class="heading-1 mb-6 text-white max-w-[345px] md:max-w-[396px]">
-            XX99 MARK II HEADPHONES
-         </h1>
-
-         <p class="body-text mb-7 text-[#ffffffc2] max-w-[345px] md:mb-10">
-            Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.
-         </p>
-
-         <router-link to="/headphones/xx99-mark-two-headphones" class="primary_btn">
-            SEE PRODUCT
-         </router-link>
-
-      </div>
-
-   </section>
-
    <main>
+      <!-- >>>>>> HEADER + HERO SECTION -->
+      <section
+         class="hero relative p-[0.01px]
+            bg-[url('/src/assets/imgs/home/mobile/image-header.jpg')] bg-cover bg-center
+            sml:bg-[url('/src/assets/imgs/home/tablet/image-header.jpg')]
+            lg:bg-[url('/src/assets/imgs/home/desktop/image-hero.jpg')] lg:bg-[55%]
+            pxl:bg-center
+         "
+      >
+         <headerBar />
+
+         <menuBar  class="w-full"/>
+
+         <!-- MAIN MARGIN -->
+         <div
+            class="
+               margin pt-[108px] pb-[112px] text-center flex flex-col justify-center items-center
+               md:pt-[126px] md:pb-[167px]
+               lg:justify-start lg:items-start lg:text-left
+               xl:pt-[128px] xl:pbt-[158px]
+               p2xl:pt-[140px] p2xl:pb-[200px]
+               p4xl:pb-[250px]
+            "
+            >
+
+            <span class="overline-heading text-ad-off-white-text mb-4 md:mb-6 ">
+               New Product
+            </span>
+
+            <!-- HEADING -->
+            <h1 class="heading-1 mb-6 text-white max-w-[345px] md:max-w-[396px]">
+               XX99 Mark II Headphones
+            </h1>
+
+            <p class="body-text mb-7 text-[#ffffffc2] max-w-[345px] md:mb-10">
+               Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.
+            </p>
+
+            <router-link to="/headphones/xx99-mark-two-headphones" class="primary_btn">
+               See product
+            </router-link>
+
+         </div>
+
+      </section>
+
       <!-- >>>>>> PRODUCT CATEGORIES -->
       <section
          class="product-categories pt-5 pb-[30px] md:pt-[148px] md:pb-[43px] lg:pt-[200px] lg:pb-[84px]"
@@ -94,7 +93,7 @@
                <!-- TEXT + ACTION BTN -->
                <div class="relative z-2 text-center flex flex-col items-center justify-center lg:items-start lg:text-left lg:w-full">
                   <h2 class="heading-1 text-white max-w-[200px] mb-6 md:max-w-[349px] md:mb-6 lg:max-w[261px]">
-                     ZX9 SPEAKER
+                     ZX9 Speaker
                   </h2>
 
                   <p class="body-text text-ad-off-white-text mb-6 max-w-[280px] md:mb-10 lg:max-w-[300px]">
@@ -102,7 +101,7 @@
                   </p>
 
                   <router-link to="/speakers/zx9-speaker" class="secondary_btn">
-                     SEE PRODUCT
+                     See Product
                   </router-link>
                </div>
             </div>
@@ -119,11 +118,11 @@
                "
             >
                <h2 class="text-[28px] leading-[38px] tracking-[2px] font-bold mb-8">
-                  ZX7 SPEAKER
+                  ZX7 Speaker
                </h2>
 
                <router-link to="/speakers/zx7-speaker" class="outline_btn">
-                  SEE PRODUCT
+                  See Product
                </router-link>
             </div>
 
@@ -143,11 +142,11 @@
                <!-- TEXT -->
                <div class="rounded-lg bg-ad-light-grey w-full pl-6 py-[41px] md:h-full md:pl-[63.75px] md:py-[101px] md:w-[50%]">
                   <h2 class="text-[28px] leading-[38px] tracking-[2px] font-bold mb-8">
-                     YX1 EARPHONES
+                     YX1 Earphones
                   </h2>
 
                   <router-link to="/earphones/yx1-earphones" class="outline_btn">
-                     SEE PRODUCT
+                     See Product
                   </router-link>
                </div>
             </div>

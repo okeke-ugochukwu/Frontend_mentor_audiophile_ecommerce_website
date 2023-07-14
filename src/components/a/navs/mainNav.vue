@@ -6,8 +6,8 @@
             v-for="item in navLinks" :key="item"
          >
             <router-link 
-               :to="item.toLowerCase()" 
-               class="text-white font-bold leading-[25px] tracking-[2px] hover:text-ad-brown"
+               :to="`/${item.toLowerCase()}`" 
+               class="text-white font-bold leading-[25px] tracking-[2px] hover:text-ad-brown uppercase"
             >
                {{ item }}
             </router-link>
@@ -21,7 +21,7 @@
       name: 'MainNav',
 
       setup () {
-         const navLinks = ['HOME', 'HEADPHONES', 'SPEAKERS', 'EARPHONES']
+         const navLinks = ['Home', 'Headphones', 'Speakers', 'Earphones']
 
          return { navLinks }
       }

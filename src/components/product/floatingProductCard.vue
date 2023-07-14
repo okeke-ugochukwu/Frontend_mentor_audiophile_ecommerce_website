@@ -11,12 +11,12 @@
       > 
 
       <h6 class="heading-6 text-black mb-[17px]">
-         {{ category.toUpperCase() }}
+         {{ category }}
       </h6>
 
       <router-link :to="`/${category}`" class="aux_btn mb-[22px]">
-         <span>
-            SHOP
+         <span class="uppercase">
+            Shop
          </span>  
 
          <img src="@/assets/imgs/shared/desktop/icon-arrow-right.svg" alt="now">

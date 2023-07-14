@@ -17,8 +17,8 @@ module.exports = defineConfig({
       productCategory: {
          entry: './src/views/productCategory/main.js',
          template: 'public/index.html',
-         filename: 'product.html',
-         chunks: ['chunk-vendors', 'chunk-common', 'product'],
+         filename: 'product-categories.html',
+         chunks: ['chunk-vendors', 'chunk-common', 'product-categories'],
          title: 'Audiophile | Product' ,
       },
 

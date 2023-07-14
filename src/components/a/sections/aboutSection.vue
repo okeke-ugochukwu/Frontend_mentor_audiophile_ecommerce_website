@@ -16,7 +16,7 @@
          <!-- TEXT -->
          <div class="text-center max-w-[573px] w-full lg:text-left lg:pr-[20px] lg:w-[50%] lg:max-w-unset pxl:pr-[105px]">
             <h2 class="heading-2 mb-8 max-w-[455px] mx-auto md:max-w-[unset]">
-               BRINGING YOU THE <span class="text-ad-brown">BEST</span> AUDIO GEAR
+               Bringing You The <span class="text-ad-brown">Best</span> Audio Gear
             </h2>
             
             <p class="body-text text-ad-off-black font-medium">

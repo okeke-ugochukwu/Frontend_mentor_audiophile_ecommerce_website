@@ -8,7 +8,7 @@
          "
       >
          <h2 class="heading-2">
-            {{ productCategory.toUpperCase() }}
+            {{ productCategory }}
          </h2>
       </header>
    </section>
@@ -19,12 +19,11 @@
 
 <script>
    import ProductFlexBlock from '@/components/product/productFlexBlock'
-   import { computed } from 'vue'; import { useStore } from 'vuex'
+   import { ref, computed, watch } from 'vue'; import { useStore } from 'vuex'
    import { useRoute } from 'vue-router'
 
    export default {
       name: 'CategoryProducts',
-      props: ['productCategory'],
       components:  { ProductFlexBlock },
 
       setup () {
@@ -32,10 +31,15 @@
          const route = useRoute()
 
          //GET PRODUCTS FROM STATE
-         const productCategory = route.params.id
-         const products = computed(() => { return store.getters.FILTERED_PRODUCTS(productCategory)})
+         var productCategory = ref(route.params.category)
+         var products = computed(() => { return store.getters.FILTERED_PRODUCTS(productCategory.value)})
 
-         return { products }
+         watch(()=> route.params.category, () => {
+            productCategory.value = route.params.category
+         })
+
+         
+         return { productCategory, products }
       }
    }
 </script>

@@ -37,16 +37,10 @@ const routes = [
 
    //PRODUCT CATEGORY
    {
-      path: '/:id',
-      name: 'productCategory',
+      path: '/:category',
       component: () => import(/* webpackChunkName: "product-category-route" */ '@/views/productCategory/productCategory.vue'),
 
       children: [
-         {
-            path: '/',
-            redirect: { name: 'categoryProducts' }
-         },
-
          {
             path: '',
             name: 'categoryProducts',
@@ -55,7 +49,7 @@ const routes = [
 
          
          {
-            path: ':id',
+            path: ':product',
             name: 'product',
             component: () => import(/* webpackChunkName: "product-route" */ '@/components/product/productDetail.vue'),
          }

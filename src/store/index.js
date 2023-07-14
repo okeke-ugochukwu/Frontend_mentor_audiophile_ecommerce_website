@@ -15,6 +15,10 @@ const store = createStore({
    getters: {
       FILTERED_PRODUCTS: (state) => (category) => {
          return state.products.filter(product => product.category === category).reverse()
+      },
+
+      FILTERED_PRODUCT: (state) => (slug) => {
+         return state.products.find(product => product.slug === slug)
       }
    },
 

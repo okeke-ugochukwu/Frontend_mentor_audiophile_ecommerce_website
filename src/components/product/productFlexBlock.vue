@@ -20,13 +20,13 @@
          <!-- DESCR + LINK -->
          <div class="lg:w-1/2 lg:max-w-[445px]">
             <span v-if="product.new" class="overline-heading block text-center text-ad-brown mb-6 md:mb-4 lg:text-left">
-               NEW PRODUCT
+               New Product
             </span>
 
             <div class="text-center flex flex-col items-center gap-6 md:gap-9 lg:text-left lg:items-start">
                <h2 class="heading-2 max-w-[390px]">
-                  {{ product.model.toUpperCase() }} <br />
-                  {{ product.type.toUpperCase() }}
+                  {{ product.model }} <br />
+                  {{ product.type }}
                </h2>
 
                <p class="body-text text-ad-off-black max-w-[572px]">   
@@ -34,7 +34,7 @@
                </p>
 
                <router-link :to="`/${product.category}/${product.slug}`" class="primary_btn">
-                  SEE PRODUCT
+                  See product
                </router-link>
             </div>
          </div>

@@ -1,12 +1,11 @@
 @tailwind base;
-@tailwind components;
 @tailwind utilities;
 @import './partials/base';
 
 * {
    font-family: 'Manrope', sans-serif;
    transition: .3s;
-//    outline: 1px solid rgb(194, 192, 192); 
+//    outline: 1px solid rgb(194, 192, 192); qqq
 }
 .margin {
    width: 82.7%;
@@ -20,4 +19,17 @@
 }
 img.reset-img {
    max-width: unset;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+   appearance: none;
+  -moz-appearance: textfield;
 }

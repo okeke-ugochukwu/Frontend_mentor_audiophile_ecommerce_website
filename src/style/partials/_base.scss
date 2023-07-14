@@ -7,6 +7,7 @@
    line-height: 2.5rem; //40px  
    font-weight: 700;
    letter-spacing: 0.0804rem; //1.28571px 
+   text-transform: uppercase;
    
    @include tabs {
       font-size: 3.5rem; //56px
@@ -19,6 +20,7 @@
    line-height: 2.375rem; //38px
    font-weight: 700;
    letter-spacing: 1px; //1px
+   text-transform: uppercase;
    
    @include tabs {
       font-size: 2.5rem; //40px
@@ -31,6 +33,7 @@
    line-height: 2.25rem; //24px
    font-weight: 700;
    letter-spacing: 0.0536rem; //0.857143px
+   text-transform: uppercase;
    
    @include tabs {
       font-size: 32px; //32px
@@ -46,6 +49,7 @@
    line-height: 33px; //33px
    font-weight: 700;
    letter-spacing: 1.71429px; //1.71429px
+   text-transform: uppercase;
    
    @include tabs {
 
@@ -56,6 +60,7 @@
    line-height: 1.25rem; //20px
    font-weight: 700;
    letter-spacing: 0.067rem; //1.07143px
+   text-transform: uppercase;
 
    
    @include laps-mini {
@@ -68,6 +73,7 @@
    font-size: 0.875rem; //14px
    line-height: 1.1875rem; //19px 
    letter-spacing: 0.625rem; //10px
+   text-transform: uppercase;
 }
 
 //BODY TEXT
@@ -90,6 +96,7 @@
    letter-spacing: 0.0625rem; ///1px
    background: $adBrown;
    color:  hsl(0, 0%, 98%);
+   text-transform: uppercase;
 }
 .secondary_btn {
    display: flex;
@@ -103,6 +110,7 @@
    letter-spacing: 0.0625rem; ///1px
    background: black;
    color:  white;
+   text-transform: uppercase;
 }
 .outline_btn {
    display: flex;
@@ -116,6 +124,7 @@
    letter-spacing: 0.0625rem; ///1px
    color: black;
    border: 1px solid black;
+   text-transform: uppercase;
 }
 .aux_btn {
    display: flex;

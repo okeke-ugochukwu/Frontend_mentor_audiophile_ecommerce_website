@@ -29,7 +29,9 @@
             </p>
 
             <div class="w-full flex flex-col gap-12 md:flex-row md:justify-between">
-               <div class="body-text text-ad-off-white-text">Copyright {{ new Date().getFullYear() }}. All Rights Reserved</div>
+               <div class="body-text text-ad-off-white-text">
+                  Copyright {{ new Date().getFullYear() }}. All Rights Reserved
+               </div>
 
                <div>
                   <ul class="flex items-center justify-center gap-4">
