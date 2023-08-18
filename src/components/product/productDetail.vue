@@ -44,6 +44,7 @@
                            w-4 h-[16px] border-none bg-transparent outline-none font-bold text-[13px] 
                            text-center text-black opacity-25
                         "
+                        @click="quantity > 1 ? quantity-- : ' '"
                      > - </button>
                      
                      <input 
@@ -60,11 +61,12 @@
                            w-4 h-[16px] border-none bg-transparent outline-none font-bold text-[13px] 
                            text-center text-black opacity-25
                         "
+                        @click="quantity++"
                      > + </button>
                   </div>
 
                   <!-- ADD TO CART -->
-                  <button class="primary_btn w-[160px]"> Add to cart </button>
+                  <button class="primary_btn w-[160px]" @click="ADD_TO_CART(product)" :disabled="quantity < 1"> Add to cart </button>
 
                </div>
             </div>
@@ -164,7 +166,8 @@
 </template>
 
 <script>
-   import { useStore } from 'vuex'; import { ref, computed, watch } from 'vue'
+   import { useStore } from 'vuex'; 
+   import { ref, computed, watch } from 'vue'
    import { useRoute } from 'vue-router'
 
    export default {
@@ -180,9 +183,8 @@
 
          watch(()=> route.params.product, () => {
             slug.value = route.params.product
+            quantity.value = 1
          })
-
-         var quantity = ref(1)
 
          function GET_PRODUCT_LINK(slug)  {
             var product = store.getters.FILTERED_PRODUCT(slug)
@@ -191,7 +193,21 @@
             return productLink
          }
 
-         return { product, quantity, GET_PRODUCT_LINK }
+         var quantity = ref(1)
+         function ADD_TO_CART(product) {
+            if(quantity.value >= 1) {
+                  store.commit('ADD_PRODUCT', {
+                  slug: product.slug,
+                  name: product.name,
+                  model: product.model,
+                  type: product.type,
+                  price: product.price,
+                  quantity: quantity.value
+               })
+            }
+         }
+
+         return { product, quantity, GET_PRODUCT_LINK, ADD_TO_CART }
       }
    }
 </script>

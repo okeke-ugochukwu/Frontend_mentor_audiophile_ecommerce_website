@@ -97,6 +97,11 @@
    background: $adBrown;
    color:  hsl(0, 0%, 98%);
    text-transform: uppercase;
+
+   &:disabled {
+      opacity: .9;
+      cursor: not-allowed;
+   }
 }
 .secondary_btn {
    display: flex;
