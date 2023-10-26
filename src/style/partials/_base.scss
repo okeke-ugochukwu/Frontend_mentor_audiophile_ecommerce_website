@@ -28,6 +28,19 @@
       letter-spacing: 0.0893rem; //1.42857px
    }
 }
+.heading-2i {
+   font-size: 1.75rem; //28px
+   line-height: normal;
+   font-weight: 700;
+   letter-spacing: 1px; //1px
+   text-transform: uppercase;
+   
+   @include tabs {
+      font-size: 2rem; //32px
+      line-height: 2.25rem; //36px
+      letter-spacing: 0.0714rem; //1.143px
+   }
+}
 .heading-3 {
    font-size: 1.5rem; //24px
    line-height: 2.25rem; //24px
@@ -75,6 +88,37 @@
    letter-spacing: 0.625rem; //10px
    text-transform: uppercase;
 }
+.form-group-heading {
+   font-size: 0.8125rem; //1px
+   font-style: normal;
+   font-weight: 700;
+   line-height: 1.5625rem; //25px
+   letter-spacing: 0.0581rem; //0.l929px
+   text-transform: uppercase;
+}
+.label {
+   font-size: 12px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: normal;
+   letter-spacing: -0.214px;
+}
+
+input {
+   &:focus {
+      outline: none;
+   }
+   
+   &[type=number] {
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+         margin: 0;
+      }
+
+      -moz-appearance: textfield;
+   }
+}
 
 //BODY TEXT
 .body-text {
@@ -83,26 +127,6 @@
    font-weight: 500;
 }
 
-//BUTTONS
-.primary_btn {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   width: 160px;
-   height: 48px;
-   font-weight: 700;
-   font-size: 0.8125rem; //13px
-   line-height: 1.125rem; //18px
-   letter-spacing: 0.0625rem; ///1px
-   background: $adBrown;
-   color:  hsl(0, 0%, 98%);
-   text-transform: uppercase;
-
-   &:disabled {
-      opacity: .9;
-      cursor: not-allowed;
-   }
-}
 .secondary_btn {
    display: flex;
    align-items: center;
@@ -141,4 +165,12 @@
    line-height: 1.125rem; //18px
    letter-spacing: 0.0625rem; //1px
    color: rgba(0, 0, 0, 0.5);
+
+   img{
+      display: block;
+   }
+
+   &:hover {
+      gap: 20px;
+   }
 }

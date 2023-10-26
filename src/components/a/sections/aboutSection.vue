@@ -3,7 +3,7 @@
    <section class="about py-[60px] md:pt-[48px] md:pb-[96px] lg:pt-[100px] lg:pb-[200px]">
 
       <!-- MAIN MARGIN -->
-      <div class="margin flex flex-col items-center gap-10 md:gap-[63px] lg:flex-row-reverse">
+      <div class="margin flex flex-col items-center gap-10 md:gap-[63px] lg:flex-row-reverse lg:justify-between">
          <!-- IMAGE -->
          <div class="overflow-hidden rounded-lg w-full lg:w-[50%]">
             <picture>
@@ -14,7 +14,7 @@
          </div>
 
          <!-- TEXT -->
-         <div class="text-center max-w-[573px] w-full lg:text-left lg:pr-[20px] lg:w-[50%] lg:max-w-unset pxl:pr-[105px]">
+         <div class="text-center max-w-[573px] w-full lg:text-left lg:pr-[20px] lg:w-[50%] lg:max-w-unset pxl:pr-0 pxl:max-w-[445px] pxl:mt-[40px]">
             <h2 class="heading-2 mb-8 max-w-[455px] mx-auto md:max-w-[unset]">
                Bringing You The <span class="text-ad-brown">Best</span> Audio Gear
             </h2>

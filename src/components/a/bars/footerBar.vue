@@ -1,11 +1,11 @@
 <template>
-   <footer class="relative pt-12 pb-[38px] bg-ad-black md:pt-[60px] md:pb-[46px] lg:pt-[75px] lg:pb-[48px]">
+   <footer class="relative pt-12 pb-[38px] bg-ad-black md:pt-[60px] md:pb-[46px] lg:pt-[75px] lg:pb-[48px] pxl:max-h-[365px]">
 
       <!-- MARGIN -->
       <div class="margin">
 
          <!-- LOGO + NAVIGATION -->
-         <div class="flex flex-col items-center gap-12 mb-12  md:items-start md:mb-8 md:gap-8">
+         <div class="flex flex-col items-center gap-12 mb-12  md:items-start md:mb-8 md:gap-8 pxl:flex-row pxl:justify-between">
             <div class="absolute top-0 w-[101px] h-1 bg-ad-brown">
 
             </div>
@@ -51,7 +51,7 @@
 </template>
 
 <script>
-   import mainNav from '../navs/mainNav.vue';
+   import mainNav from '@/components/a/navs/mainNav.vue';
 
    export default {
       name: 'footerBar',

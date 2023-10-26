@@ -1,67 +1,68 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-   content: [
-      './src/assets/**/*.{css, scss}',
-      './src/components/*.{vue,js}',
-      './src/components/**/*.{vue,js}',
-      './src/views/**/*.{vue,js}',
-      './*.{vue,js,ts}',
-  ],
+	content: [
+		'./src/assets/**/*.{css, scss}',
+		'./src/components/*.{vue,js}',
+		'./src/components/**/*.{vue,js}',
+		'./src/views/**/*.{vue,js}',
+		'./*.{vue,js,ts}',
+	],
 
-//    purge: [
-//       './src/assets/**/*.{css, scss}',
-//       './src/components/*.{vue,js}',
-//       './src/components/**/*.{vue,js}',
-//       './*.{vue,js,ts}',
-//    ],
+	//    purge: [
+	//       './src/assets/**/*.{css, scss}',
+	//       './src/components/*.{vue,js}',
+	//       './src/components/**/*.{vue,js}',
+	//       './*.{vue,js,ts}',
+	//    ],
 
-  theme: {
-    extend: {
-      colors: {
-         'ad-brown': 'hsl(22, 65%, 57%)',
-         'ad-black': 'hsl(0, 0%, 6%)',
-         'ad-off-black': 'rgba(0, 0, 0, 0.5)',
-         'ad-light-grey': 'hsl(0, 0%, 95%)',
-         'ad-off-white' : 'hsl(0, 0%, 98%)',
-         'ad-off-white-text': '#ffffff80',
-         'ad-off-black-text': '#00000080',
-         'ad-peach-brown': 'hsl(21, 94%, 75%)'
-      },
+	theme: {
+		extend: {
+			colors: {
+				'ad-brown': 'hsl(22, 65%, 57%)',
+				'ad-black': 'hsl(0, 0%, 6%)',
+				'ad-off-black': 'rgba(0, 0, 0, 0.5)',
+				'ad-light-grey': 'hsl(0, 0%, 95%)',
+				'ad-grey': 'hsl(0, 0%, 81%)',
+				'ad-off-white': 'hsl(0, 0%, 98%)',
+				'ad-off-white-text': '#ffffff80',
+				'ad-off-black-text': '#00000080',
+				'ad-peach-brown': 'hsl(21, 94%, 75%)'
+			},
 
-      screens: {
-         'sml': '480px',
-         // => @media (min-width: 480px) { ... }
+			screens: {
+				'sml': '480px',
+				// => @media (min-width: 480px) { ... }
 
-         'sm': '640px',
-         // => @media (min-width: 640px) { ... }
+				'sm': '640px',
+				// => @media (min-width: 640px) { ... }
 
-         'md': '768px',
-         // => @media (min-width: 768px) { ... }
+				'md': '768px',
+				// => @media (min-width: 768px) { ... }
 
-         'lg': '1024px',
-         // => @media (min-width: 1024px) { ... }
+				'lg': '1024px',
+				// => @media (min-width: 1024px) { ... }
 
-         'pxl': '1200px',
-         // => @media (min-width: 1200px) { ... }
+				'pxl': '1200px',
+				// => @media (min-width: 1200px) { ... }
 
-         'xl': '1280px',
-         // => @media (min-width: 1280px) { ... }
+				'xl': '1280px',
+				// => @media (min-width: 1280px) { ... }
 
-         'p2xl': '1440px',
-         // => @media (min-width: 1500px) { ... }
+				'p2xl': '1440px',
+				// => @media (min-width: 1500px) { ... }
 
-         '2xl': '1536px',
-         // => @media (min-width: 1536px) { ... }
+				'2xl': '1536px',
+				// => @media (min-width: 1536px) { ... }
 
-         '3xl': '1600px',
-         // => @media (min-width: 1600px) { ... }
+				'3xl': '1600px',
+				// => @media (min-width: 1600px) { ... }
 
-         'p4xl': '1600px',
-         // => @media (min-width: 1600px) { ... }
-      }
-    },
-  },
-  plugins: [],
+				'p4xl': '1600px',
+				// => @media (min-width: 1600px) { ... }
+			}
+		},
+	},
+	plugins: [],
 }
 

@@ -11,6 +11,10 @@ const store = createStore({
          activeMenu: 'menu'
       },
 
+      modal: {
+         isActive: false
+      },
+
       products: [],
 
       productCategories: ['headphones', 'speakers', 'earphones'],
@@ -53,7 +57,7 @@ const store = createStore({
             state.cart.push(payload)
          }
 
-         sessionStorage.setItem('cart', JSON.stringify(state.cart))
+         localStorage.setItem('cart', JSON.stringify(state.cart))
          console.log(JSON.stringify(state.cart))
       },
 
@@ -72,7 +76,7 @@ const store = createStore({
                }
             }
 
-            sessionStorage.setItem('cart', JSON.stringify(state.cart))
+            localStorage.setItem('cart', JSON.stringify(state.cart))
          }
  
       },
@@ -83,7 +87,7 @@ const store = createStore({
 
       RESET_CART(state) {
          state.cart = []
-         sessionStorage.removeItem('cart')
+         localStorage.removeItem('cart')
       }
    },
 

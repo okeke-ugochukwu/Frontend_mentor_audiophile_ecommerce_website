@@ -19,7 +19,8 @@
 
 <script>
    import ProductFlexBlock from '@/components/product/productFlexBlock'
-   import { ref, computed, watch } from 'vue'; import { useStore } from 'vuex'
+   import { ref, computed, watch } from 'vue'; 
+   import { useStore } from 'vuex'
    import { useRoute } from 'vue-router'
 
    export default {
@@ -37,7 +38,6 @@
          watch(()=> route.params.category, () => {
             productCategory.value = route.params.category
          })
-
          
          return { productCategory, products }
       }

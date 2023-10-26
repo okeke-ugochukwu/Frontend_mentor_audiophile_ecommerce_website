@@ -10,9 +10,9 @@
          class="w-[128px] mt-[-40px] lg:w-[200px] lg:mt-[-83px]"
       > 
 
-      <h6 class="heading-6 text-black mb-[17px]">
+      <h2 class="heading-6 text-black mb-[17px]">
          {{ category }}
-      </h6>
+      </h2>
 
       <router-link :to="`/${category}`" class="aux_btn mb-[22px]">
          <span class="uppercase">

@@ -7,6 +7,7 @@
             sm:m-0 sm:top-6
          "
       >
+         <!-- >>HEADING -->
          <div class="flex items-center justify-between">
             <h5 class="text-lg font-bold tracking-[1.286px] uppercase">
                Cart <span>{{ `(${cart.length})` }}</span>
@@ -20,16 +21,21 @@
             </button>
          </div>
 
+         <!-- >>EMPTY STATE -->
          <div v-if="cart.length === 0" class="mt-16">
             <p class="body-text text-center text-ad-off-black w-[160px] m-auto mb-[20px]">
                There are no items in your cart, yet.
             </p>
-
-            <router-link to="#product-catgories" class="primary_btn w-[100%_!important]">
-               Shop products
-            </router-link>
+            
+            <primaryBtn 
+               :text="`Shop products`" 
+               :type="`router-link`"
+               :path="`/#product-categories`"
+               class="w-[100%_!important]"
+            />
          </div>
 
+         <!-- >>CART ITEMS -->
          <div v-else>
             <ul class="flex flex-col gap-6">
                <li 
@@ -83,6 +89,7 @@
             </ul>
          </div>
 
+         <!-- >>TOTAL & CHECKOUT -->
          <div  v-if="cart.length > 0 " class="flex flex-col gap-6">
             <div class="flex justify-between body-text text-ad-off-black">
                <span class="uppercase font-bold">
@@ -94,9 +101,12 @@
                </span>
             </div>
 
-            <router-link to="/checkout" class="primary_btn w-[100%_!important]">
-               Checkout
-            </router-link>
+            <primaryBtn 
+               :text="`Checkout`" 
+               :type="`router-link`"
+               :path="`/checkout`"
+               class="w-[100%_!important]"
+            />
          </div>
       </div>  
    </div>
@@ -105,16 +115,20 @@
 <script>
    import { computed } from 'vue'; 
    import { useStore } from 'vuex';
+   import primaryBtn from '@/components/a/buttons/primaryBtn.vue';
 
    export default {
       name: 'userCart',
+      components: {
+         primaryBtn,
+      },
 
       setup () {
 
          const store = useStore()
    
-
          const cart = computed(() => { return store.state.cart })
+         
          const cartTotal = computed(() => { 
             var total = 0
             

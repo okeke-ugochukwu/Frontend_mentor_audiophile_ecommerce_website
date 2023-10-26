@@ -65,9 +65,10 @@
                      > + </button>
                   </div>
 
-                  <!-- ADD TO CART -->
-                  <button class="primary_btn w-[160px]" @click="ADD_TO_CART(product)" :disabled="quantity < 1"> Add to cart </button>
-
+                  <addToCartBtn 
+                     @click="ADD_TO_CART(product)"
+                     :disabled="quantity < 1"
+                  />
                </div>
             </div>
          </div>
@@ -156,9 +157,11 @@
                   {{ product.name }}
                </h5>
 
-               <router-link :to="GET_PRODUCT_LINK(product.slug)" class="primary_btn"> 
-                  See Product
-               </router-link>
+                <primaryBtn 
+                  :text="`See product`" 
+                  :type="`router-link`"
+                  :path="GET_PRODUCT_LINK(product.slug)"
+               />
             </div>
          </div>
       </div>
@@ -169,9 +172,12 @@
    import { useStore } from 'vuex'; 
    import { ref, computed, watch } from 'vue'
    import { useRoute } from 'vue-router'
+   import primaryBtn from '@/components/a/buttons/primaryBtn.vue'
+   import addToCartBtn from '@/components/a/buttons/addToCartBtn.vue'
 
    export default {
       name: 'productDetail',
+      components: { primaryBtn, addToCartBtn },
 
       setup () {
          const store = useStore()
@@ -196,7 +202,7 @@
          var quantity = ref(1)
          function ADD_TO_CART(product) {
             if(quantity.value >= 1) {
-                  store.commit('ADD_PRODUCT', {
+               store.commit('ADD_PRODUCT', {
                   slug: product.slug,
                   name: product.name,
                   model: product.model,

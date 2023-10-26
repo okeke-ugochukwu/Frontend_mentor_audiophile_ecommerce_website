@@ -1,6 +1,6 @@
 <template>
    <header
-      class="header w-full h-[90px] border-solid border-b-2 border-b-[#ffffff1a] z-[22] md:h-[90px] md:border-none"
+      class="header w-full h-[90px] border-solid border-b-2 border-b-[#ffffff1a] z-[22] md:h-[90px] md:border-none lg:h-[97px]" 
       :class="{'bg-black border-none active': menu.isActive && menu.activeMenu === 'menu'}" 
    >
 
@@ -34,18 +34,10 @@
          </router-link>
 
          <!-- NAVIGATION LINKS -->
-         <mainNav class="hidden lg:block"/>
+         <mainNav aria-label="main-navigation" class="hidden lg:block lg:ml-[-8.2vw]"/>
 
          <!-- CART -->
-         <button 
-            class="w-[26px]" :class="{'opacity-50': menu.isActive}"
-            @click="$store.dispatch('TOGGLE_MENU', ['cart', 'menu'])"
-         >
-            <img 
-               class="w-full"
-               src="@/assets/imgs/shared/cart.svg" alt="cart"
-            >
-         </button>
+         <cartIndicator />
 
       </div>
 
@@ -53,12 +45,14 @@
 </template>
 
 <script>
-   import mainNav from '../navs/mainNav.vue';
-   import { computed } from 'vue'; import { useStore } from 'vuex';
+   import mainNav from '@/components/a/navs/mainNav.vue';
+   import cartIndicator from '@/components/cart/cartIndicator.vue';
+   import { computed } from 'vue'; 
+   import { useStore } from 'vuex';
 
    export default {
       name :'headerBar',
-      components: { mainNav },
+      components: { mainNav, cartIndicator },
       
       setup () {
          const store = useStore()
@@ -70,8 +64,8 @@
    }
 </script>
 
-<style lang="scss" scoped>
-    @import '@/style/partials/screens';
+<style lang="scss">
+   //  @import '@/style/partials/screens';
 
 //    .header.active {
 //       position: absolute;

@@ -2,7 +2,7 @@ const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
   transpileDependencies: true,
 
-//   publicPath: '/Frontend_mentor_rest_api_countries/',
+  publicPath: '/Frontend_mentor_audiophile_ecommerce_website/',
 
    pages: {
       index: {
@@ -13,7 +13,6 @@ module.exports = defineConfig({
          title: 'Audiophile',
       },
 
-      
       productCategory: {
          entry: './src/views/productCategory/main.js',
          template: 'public/index.html',
@@ -30,6 +29,12 @@ module.exports = defineConfig({
          title: 'Checkout',
       },
 
-      
+      '404': {
+         entry: './src/views/404/main.js',
+         template: 'public/index.html',
+         filename: '404.html',
+         chunks: ['chunk-vendors', 'chunk-common', '404'],
+         title: '404',
+      },
    }
 })

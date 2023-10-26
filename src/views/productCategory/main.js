@@ -2,7 +2,6 @@ import { createApp } from 'vue'
 import App from './productCategory.vue'
 import router from '@/router'
 import store from '@/store'
-import '@/style/views/home.scss'
+import { createMetaManager } from 'vue-meta'
 
-   
-createApp(App).use(store).use(router).mount('#app')
+createApp(App).use(store).use(router).use(createMetaManager()).mount('#app')

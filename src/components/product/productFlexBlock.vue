@@ -33,9 +33,11 @@
                   {{ product.description }}
                </p>
 
-               <router-link :to="`/${product.category}/${product.slug}`" class="primary_btn">
-                  See product
-               </router-link>
+               <primaryBtn 
+                  :text="` See product`" 
+                  :type="`router-link`"
+                  :path="`/${product.category}/${product.slug}`"
+               />
             </div>
          </div>
       </div>
@@ -43,8 +45,11 @@
 </template>
 
 <script>
+   import primaryBtn from '@/components/a/buttons/primaryBtn.vue'
+
    export default {
       name: 'ProductFlexBlock',  
+      components: { primaryBtn },
       props: ['index', 'product'],
 
       setup () {

@@ -6,12 +6,10 @@
 
    <main>
       <!-- VIEW FOR CATEGORY PRODUCTS & CATEGORY PRODUCTS DETAIL -->
-      <router-view></router-view>
+      <router-view />
 
       <!-- >>>>>> PRODUCT CATEGORIES SECION-->
-      <section
-         class="product-categories pt-5 pb-[30px] md:pt-[148px] md:pb-[43px] lg:pt-[200px] lg:pb-[84px]"
-      >
+      <section class="product-categories pt-5 pb-[30px] md:pt-[148px] md:pb-[43px] lg:pt-[200px] lg:pb-[84px]">
 
          <!-- MAIN MARGIN -->
          <div class="margin md:flex md:gap-[10px] lg:gap-[30px]">
@@ -37,10 +35,11 @@
    import floatingProductCard from '@/components/product/floatingProductCard.vue'
    import aboutSection from '@/components/a/sections/aboutSection'
    import GET_PRODUCTS from '@/composables/getProducts'
-   import { computed, onMounted } from 'vue'; import { useStore } from 'vuex'
+   import { computed, onMounted } from 'vue'; 
+   import { useStore } from 'vuex'
 
    export default {
-      name: 'HomePage',
+      name: 'CategoryPage',
       components: { headerBar, menuBar, floatingProductCard, aboutSection, footerBar },
 
       setup () {
